@@ -1,0 +1,576 @@
+>> ssh bandit9@bandit.labs.overthewire.org -p 2220
+This is a OverTheWire game server. More information on http://www.overthewire.org/wargames
+
+bandit9@bandit.labs.overthewire.org's password: 
+Linux bandit.otw.local 5.4.8 x86_64 GNU/Linux
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+
+If you find any problems, please report them to Steven or morla on
+irc.overthewire.org.
+
+--[ Playing the games ]--
+
+  This machine might hold several wargames.
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ and /proc/ is disabled
+  so that users can not snoop on eachother. Files and directories with
+  easily guessable or short names will be periodically deleted!
+
+  Please play nice:
+
+    * don't leave orphan processes running
+    * don't leave exploit-files laying around
+    * don't annoy other players
+    * don't post passwords or spoilers
+    * again, DONT POST SPOILERS!
+      This includes writeups of your solution on your blog or website!
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few usefull tools which you can find
+ in the following locations:
+
+    * gef (https://github.com/hugsy/gef) in /usr/local/gef/
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /usr/local/pwndbg/
+    * peda (https://github.com/longld/peda.git) in /usr/local/peda/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /usr/local/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+    * checksec.sh (http://www.trapkit.de/tools/checksec.html) in /usr/local/bin/checksec.sh
+
+--[ More information ]--
+
+  For more information regarding individual wargames, visit
+  http://www.overthewire.org/wargames/
+
+  For support, questions or comments, contact us through IRC on
+  irc.overthewire.org #wargames.
+
+  Enjoy your stay!
+
+bandit9@bandit:~$ ls -alps
+total 40
+ 4 drwxr-xr-x  2 root     root     4096 May  7  2020 ./
+ 4 drwxr-xr-x 41 root     root     4096 May  7  2020 ../
+ 4 -rw-r--r--  1 root     root      220 May 15  2017 .bash_logout
+ 4 -rw-r--r--  1 root     root     3526 May 15  2017 .bashrc
+20 -rw-r-----  1 bandit10 bandit9 19379 May  7  2020 data.txt
+ 4 -rw-r--r--  1 root     root      675 May 15  2017 .profile
+bandit9@bandit:~$ cat data.txt
+�L�lω;��ßOܛ��ǤX��NdT$��x7��@D@�o��+D��B��M֢�Z/,_��w��#�5���
+                                                          Ў�e�&�-��Ϣ�6Q8��J�%fa�
+�np�6l
+|c���WW"&8��f��
+��VJ�$�S~����d�
+               �p�k�U�;ֿ�v�Am��H��tɘ�3�ߘ�(ǟ�E'
+                                             ���'��:��uP�ע��������g�
+!�'�
+    t��!P���
+            p
+             �q����<(�^�5�����|�-r��o��B��m;���D5�1�
+>�'��.9o�c����?�D.�\�UU,L��},�                       c�D^���!��`��P���KT���5�?)X�爓F�]��2�J�-5�|P�rL{����DX�
+                              )�W[b��
+��7<�ʗE2Qk)���>Q�G�nW([�>��L���[��ŵ-�Gw�J�p_�pT���E�}-������
+                                                            ���
+�
+v��7��[d4����[�E�ed{s�5�d!�۫*.�d�d�$6��1Td�=��{�����a���
+                                ����C�r�A�G��1�~��趤���b��2%�0`c��*�!`3r�����/�ZȆڎ�xʟ��}�����}$�x?X��7��ҟj���Hͽ��黜`��&
+                                                                                                                       �Q9�܅J��//M$�a�^�;yzEt!���WpU~eϸ`Rn,I���MT��Ձ�B$1�,�ɚџ|\{ɘ��V�媼��G�7�4@[���tk�4Ӷ��hob��X��Q�����O�`�<!��L�VSXdKi��um���m�\�WB|{�,x����vd��Т���xIY.}�м&F�,0f������RV{���l����#@^�S�Jp�`EO%s���~֬�c�}���o?/{���^��P8Щ9�d
+��r-49݈�G]vQ���ٚ���n��R�Cm�p�����~�{�r'�H(-�-r�ZƯs�xz����]+aƽ�g����|A��x*�_f�^��[Ro�+OQ��f��3,U�tG��y�*                             �����Un"����g0
+     �����GhG$���========== the*2i"4���d��k�D
+�I���Y��i�3_��6z��;`��G�GJ��;Y�ä�?���˕�.���k7B�L��N���%|��䑌���
+                                                               pu��OMd�H
+                                                                        6m���ӂ�)�I(n�
+                                                                                     �z��>�5�G��������C����3CA�󛬑t��9���hCx䫶n*ȴY��ྶ��
+�r\P���0Z����}آIǢ�ك,�   �(��I��%��������                                                                                            `�J޶#֩��cq	�u5�X��sG�&7�$Q��k�I���6!/���
+                                        j���3m���}��қ�٫��,��8\�o������E~}���h���m����DUJmUZm�W��m:+�r*Z����fZ��T����V�ܜ8A$��M�?������m��cʽ6��G���PTb�'5�
+�
+ ����>�am
+         ���6�0>�m�J"rjrW��i�%&̠p�w4���Tz�׬�FG0	+3\��|
+                                                      �ax"
+                                                          ux.j�:��.�w{���X-�
+o��$���M�P�=:G e���g�
+                     F˄�GH�(
+��pE ��0NN�yzb�[���a}o���k���J����������8����-��������Ap�=z�Fv]���r�%�H�����ϻ0˼�5m��)LI��)'0K�\�Ne�����9DLW
+�l��l(��S�HcEzf~ZȞ�_�*.b��&���ڢ���B.�%�l`��+S�$O`�� flf���v�A�o7<V�S޸��ȃ�S}1�rr���o�&��	��g"m����t�bza�
+                                                                                                       ���(
+                                                                                                           ��$���a{KG�S�6�(7
+b/���bX�C�E�RW��L��7c�=������� �{"����<�	�EF�۸�G��|�	"�g���侧lj}ZRO�Q�l"-�ab}9K�h�i;�"E
+٧X38UL���{�ӷv�Vx@��Yr;���>�Y `04�tm[�Y"��}��+�˒de��wUhy�v'~�m�������Bf����`�U�Z1�b�JG��&�m��OF����?{��M8��nKi�0ߧ�U�F
+��y���߂�$�o�zs����֍��L&�Fo������>�$�v��?�r�C�]pJC��l�E�)I��^�7�96�8c��%�*��V&�0a^���ന��x��@R/Ҹ-�m��.z�ךD{���{b��I�OpcђE�UMo�����Ԧ�U�<)D��<��`��aeTh`��"�C����L�G�:� ^@���
+���b�5��\A=�w       L
+                     ��i�`�-D��?@����C)��/�C�h��x�*#	/
+                                                         F$���WV)�Z3�I���Gt�W�A����/���N���#u��)��������<!�f"3�$�b`�V��*�I����V$~�$�%����4ĝ�j�JF��mF�!���ы'��rUẌ�C�m�~��рƗ��&;��M����D4�xY��Y�Zbb��e}\"��5��G�b`s��:���U�i����j�f�D]�J�ЧX��u1���[72V]>e�z5 �-g`��&+o��
+=��IÀ a��������˴��|*�[#��t�mD�vg��N+{G6Q���yE����z9^��ӡD�L�R���!�������*�o��
+�7XK5����щ.�D�S��y�pE�
+���-�w��D:���0�#�8�N³�-�A��X��a����A���9X�e�0�����ٶ2�n���q��Ȑ>M�@K��;^*�ad%9�br���#�r	B}T<d�W"w�+hn�$?OSQr.�
+                                                                                                              �\H�tN�	�we���H�>��E����P�3�3��4�{8xG\�#O
+�����Ͽ�f�ޘ|b;{�,�ٙ���{�L�z�                                                                                                                               7�r����T������(���8���ER�j��nJ6��c��Q�
+                          ���B�,�.rn�f
+�|���3�z��j�j�1 �]e���j�����ނ���P�(F4���_�c���2'ᕊ�^-�i�#%̀v�s�}#��.>T�h�b��7���u�,a�/�\L��dIy�l8���ұD����T��
+�.��f��n"A��m�`��:�?�K�RH�:I%�]�������	5�생nܛ�^(̮�\��c/?@��>NÕ�����bm�Hg�v�::�{��fo1o���ЇFV��,�e��_�-j��_]q4g�9�Ͼ��֤�����(s�'��A������m�����\�^�=i�A>[�!g�
+�N�ޚ��2�⠲��p;�SLV�ٔ��L�ӌ 
+�-|38��3J�����7�aip�L��p�}c��}-�~R��3�������E�cS��l�c݈�<��̚y�6=F��_���SQE��B�g%�	�E�����X�ٶ�����j_�տ`�J?�RA�U'�S�������/�3���F�Z6/Ҋ��%*$0���6�Z�-㳟�-xnfv���=/�����!x�99���㢄��ؔz~���.k��x㉝��^��.��
+                                   �4���uE��O�(����,F3&A������'�>N�P.�SJ�iQ>Zc��
+�/��V|��Z��|wJ*"����;+j��
+����u�BP�"��r�lj�+����
+                      ��M
+�
+ �?��{*[�3oI�A!�
+               ��j~�E���OO󙕄
+]                          ����JG���P�s�=����8O��0���<3qF@��QS�gtg~o6c��/�����9 ��d����rM,����ڋ���
+ '��ܢ+�%�#Ƒ��e�7�Ŋ1��YGO��q�&>\	7����H@
+扆���xk9~�����K��5�                    ���
+                   p�6��d���쓅-:�������Fx3�.,N?�����Yc��Tpb�J�ț�D`���M�n~C!l�s�*gh���5����k'�巺��nA��LCbD�k��߶��O]�� ���s�\Jv���^�>ot���]�(�O�+�sh}����2&Q�
+                                                                                                                                                            �wqND�_r�?�R�
+
+jI��4�y=fpy��
+�H�I����I������H/�tmC>�R��p�Aъ�L| c�]��Yp�T���؇p>"���
+#�B�����E�?рB�@�'<o-����Ԏb���OxYF��y3ߣ�mN�k�*6��V�h��>�e8��:a���S~��ޒ��?S��O���-_���4���
+<�}z��-F!���V��O�^��Z�^�XE�{.��S��i&�O�Z�ޮ�IZ����/ϭ·��b�_c®qd��`ݤ"��,�����R��t�68}j��^��t<�����wC�ր@�J���W�Ԟt�j��恂z�4����E%ڂ�a��f��Q~a`%�h�3֭��4�#
+                                                                                                                                                 8%��F�{�"2���T�3���z���
+                                                                                                                                                                        ����`%KƔ��E���o��n�d�Y|�����W�x��Ǖ========== password�b���;�#6�����Q�c�a��#|-l�G}`:�(��g
+                                                     2�UW�|[�������X��
+��+bZ��Aًϵy#O�R�<�]	�k�R���#�}�W�
+���Y��?g@��Ś�b��rM��L����B���,!���Y�:.�ACp�T��o]zb���	����	���R,��u�'E��d?��A�s��Tm�o-���YW]��To�
+                                                                                                      -����	?�[H�X�0�^$ꆃn=Q���/���ؔ5�?Is�l�ܤ��u���2v7ʩd6]���6q�#NR���|'�	�M,2���Bp�JbnhB�FϮ}
+                                                                                                                                                                                                   O~b�Ոq6�:j9�	w�cƯ�/ot7qM���5~5���n2��Z���A���u&>;�w�Z��=HM�M�E�d��x�(c7�n�Uyh�`��Z�	w�^e��h�jM�˗��W����]d��tQ�,{((k�?��0H�9�Е2D��3�z�B���8
+                                                                                                                                      ׺#w��W��i��t���WF���@��ؕ�����*�G�K�8�:*�B2R����?��r�
+8$�0�6.���j"����?f�9-q?9z�O�%���+@�{�"������Jͩ�U���-P̱�,���Z��g�Y�Y�;ŗї�w�±M:��(" m��`�p����;��Ç��E&s�gh'KzsX����n�!
+                                                                                                                  V�=;�y�G|�𠥸gt�l�����.3�<���U����i@幜��>2>Fqt.��A|���14VI�͟���9S/�(�8HP�nA�$,�YP�nq
+                                                                                                                                                                                                    <;l�E���~ҥ��,��wuWO)�j4]��9�k
+                      ��Y"_��������t�4�dxG9���� U����,�1�.��!Rw�����FW�׋�i1�*�7U�>vٰ�5
+��jA�e})nQ�璑Uӯ<�	����KBi��(g��~}K{ˇ��x�]7�X֔���c&
+                                                       >�Q��acer�ƙ�5�X�?.}@"*a%si*��3�s�ӒKb`�%�nf�%�j�0�2�7<v̸Nnm����Q�dX�Kj������<I=zsGi��f��h�,�Q����D�Bp���j,�� ���. �����R~���*Z�M�&���)���=�zj�?��S�N����TX�*��
+�)j/2��%�2����;�ˋ׏����JLԫA��$�'��Ň�/CV�Y�� &"�̫�ǂ��	��ۜ�F�C28���J�0����c$�!G[\��d����7�۱��s"��-�8MY�}�흂n�
+                                                                                                             $H��տ2�Mu~�p\x�͸��
+                                                                                                                               piQ�5�X/�"�'�7���FuOZ\K�P���BYD1���<2P�g���R������
+4#N�<��V��o�Z�f�U�Qj�sL�����E񏾐E������l��D�'�q�@��k��{5'�*���)=��bD�|�9��x�D2?	�u�9��m���<��s�Y�Q�π���WLz��b���HV����T�����f�Z��#r��8E/�N��ƨ������<c�O��O� {�Tm�j�A�%Ɩ��MDQ�@�q�s�j���Z)========== is��z(��ÿx
+   .��{���`�W�F[�#}�b���@H$R ͤ�b���LH/���	����p�̕;��gM`��o�x[U*ʾcj�`����@Ӱ�e�g%�&	N�zt=�kd���S$Y�r�[�{/;7�M�
+                                                                                                                  �<ł�Wŉ'�:V`Ƴ��?6�.��M��5I�3d�����F�r%z$c`�W�r�-���C !n�{�i�\xhw�fR�(�6݈������k�H�z ��<�ŸTCg�_HN�?�1\:��6Z����u�/T�\�񘨇Y�p��q�&�b[�(<��@PN����'U�LE�,ťF]̛K���>��8��;
+                                                                       ��d�K/��M��+�3���%�2`<��lr��Y'�,�
+                                                                                                        t �R#��
+                                                                                                               ������2A����
+                                                                                                                           �ui��{�`z�G鉵#Cځh���Q|L�
+���7n�1��?Qg��/��Cն�y3�8����y~]�q7진LѮSc�όw��:�p^��.�e����ao�=�Ψ+V�Y�~c�;�\��3��d��I�`�̰�ۗ~��@Ief��9�;����3��E�?Z�Ag���� �>e�5�z/���]����@�W.l���@y�t����r]�ĉ[}~s�!�TV�}ĥ��/�Z���!�I�z3p)�i���P�]��I��گ�VGi
+�˹];`��@Ģ��fRk4Ck�Z�lp{�ē���F���9��5�h����k4m?W�jۮV|+�J���H�,�R�����7Y{�`�]�� LV�t�V�ۭN.=ѓ�Jq{`�՛9�z���L����Ov�D����7��8&יV#�:����l�؇51�T�ɝ�hU�I�e�8���ŵד$�͚
+                                                                                                                                                          ��3���T��t���ѿn��u��.�#���!6�t�6IM*�5�/�`D�	mL��a��TS�˖��*��x�������S�y�LN��
+�r��۾9N��h��	�fVHi�`����-F�S/I�3���8�vfϜ��,T��(���G"�mHo��
+                                                             ����u�Y<_M���܊q�����i0�ηp�|[�6��B��dԈ�܆(�I�@ۈ�8����#��n9���i>Ǳ���uB�%3f�-�]��4��eb��+��wι��<�
+                                                                                                                                                          �;1� "���}j�
+��|x��5�,X�KX��88)%�rLj��V��f���,su�@R�b��]���y�o�;�lj�
+                                                       Q�[�!5���O$LW���^��t(�0%E>aS
+��R���t�����n��'_�]�pc�e��      Ōti�ё���`�К���;�<z'�S��F�                          ��,V��}�@�����l�*S{"��et���b=�r��S�
+@��=-�Ii��8�0��5z�"�U�b1r$���#�y�Z(V���1����L�2�k<02���:Hс��{ka�n�E�q��Q��dt�t`�4,�Ƕ�Y�~�:g3�.�*/�i;C\\N��t;afX�F7O�m�qXu���*uM
+                                                                                                                               �U*��N���Ͷ��S���z�Ǌ)�'p[�y��>pR��pj��%�aZ�T�^�F�*�[K�E0�F�J��	�����4s+ś�+NbA�m�!�/Jp�:rQ����p�����U����u�\i�Y`�
+                                      d��3��<�;z����c��:mJ\�O����
+*#	���x�q�)"��3#��){.h��l�ZcO3�
+6�ߍ�dZ3�0�]���e�Ձe�
+                   2��
+                      �z�4��@��S�oy
+GB!6��dF��ܽ$�ȕ%wx�Q,U���k�����%3j�b���5N)�����2�S�P%�l�^�$����m�����>�`rn�d#M���MS�S�w|ث�Y
+                                                                         ����U!��nD�d5�.ӱ@ST�>K`t;X�~o�|J�
+�%'�pm̟'l-����-�?��g��p���A�j��)q�M*�<��$ͨ� �'p6:��?c���]����,K�(Cg��
+P*��V%��T���q��lޑF��J�������o��/g'x�A䉠f�o�8�̢mjYp:�����GO��K9��Az/���:�������=�m�Z5�B
+��;6X�����O@��e!'וKi��6��%]r�l6C4�h�Δv@_
+        ΃4�)(��~7��K����)y+�EMA��*�9Hh��r�.e���%iѫV:��N;��ʽU2^����
+�\0�-,���1�V?**���Օ@��]#Ӧr��VC����Xu�<e���u�>���                  ��B�O�A��C�����@�na��`e�E�@17JֲM��ܡ'Ңglܚ�����_տ;���ht6;��#B�����
+                                                `��a9(�P�141>Y��V�F�t�/�ud��U;�1��YZ+y��3;���V2�W�
+                                                                                                  ���i���%�j��(\�� NȽD߶i�d�m��Hu����"����4vD�^����K#VVj�;�
+                                                                                                                                                          ;�.�����v��$�����Zν2b��|6UjI� �W֗g�3e���D�J�m�*j^�+[����l�
+    Ma��ckd^r���xñ
+`L��D�iU�Dn�zDshn:XҤ���q]�
+                          �K�If�A2��p��XX��.����_���Fq�x���XJ����cz�
+��l¤��E~���ס�ج`�D~�K                                                �ga�T���3}�����
+ ��{����Y~8����U    �.�,@����۱l��y��l05�����N��ށR�7��A%�|�&O��luG�em_ښS��\3z�1)#�����Ϯ:�B9�Ci�\U�X��p�A�!�\-����=Z�Ƚ�I����#���%�ƀ�A=|t&E��98V�n8os�g#}�4����ԯ=�O\0	f	>������3����Z�wh�^�Mrr����0C눏����u%a���O�@�[:��`:��>/���@���'׏�/ܘB~_�w�_��_ ���|�[^O�1�E�x�TV�,�L���T��>���Q���]v#8��4W��P�DD+�=2X[eO{�޲�s�#�2�v
+                                                                                                                      ����1ނ�$
+$���TjIR\+�tI��qeY|�W�B�I[aJtZH:��9��O�Ι�G�������f�^�z�u��4�Ղ/,�B$h��+�;�X�'�
+                                                                             �7�Hj��LkfWdO5`�Ֆ����p�[3�s*{NF�<����t�,6�^�sE�o����7��-RB���l���9��r�;�h��
+�]P���6ڏ�>l
+���Ec/��@�B����c:
+                 V~.��N,�*Ͱg
+                            �7�z6���Z@d�����`8������阞�#�8۞}�,�=��'�:gМ�Fav�	��ݜ��鷎��g���J�)��%%��j�v�Wӥw�oD�i
+����(/�&a�U���M���%��b@m��0�i|lb�f��k�,��Y�N�r޲�xq�(h�OY5�i���i}�뫶�ꗍ_8�a��fĢ�oN�m���x5
+     )�h��QC��I͌!i�t]��C0CH��m>�� ˯屧`�%�pC:*��!d����Xw�
+                                                        0���
+:e��Aiwj~                                                   �+�h�L��޼�F�]Àk�"n�}��t�X^+5����
+
+         �)�4��a�ߙ+)`
+                     ��c�}��������bQD�Fޓ[�����͍�>�R���+i����	0^8]W�t��V[F��苹
+��ևʯ�ߡ�;j/�2�AU���b��s�3�6�u���ᡱ1����C�Wx2���)l��(�bdo�gT�LJ����8�:~�fw��N���BbYR�I*x��:��1��M�0�a��'��*}�D�尦;7P�+]��FJ���N�$��W-��Ē�ELB�
+                                                                                                                                          �\q�*e�qy�����o��$��v��x�D85���o�fa&��
+                                                                                                                                                                                �%��q�
+��㰰/��ʇ%p�ͩ�a��ww����A���6�Gg�3tǶ���`�u�&�m�V*$ᮭ�.3Űa�#�đ��:hk9�H_b��6�Α��M��l�t�0c.��fɷ5UJ��h�Pd�*D�"�h�P��I��/��|jU�o�ތ*Ӧ�)������]�����J�B_�KX�~X�א�v�v'y��YK��ZpE5����Pl{�6�Z��mWW#+\�s/#m`���jp�*Ybc�KPi�
+
+ &��.��Y���qk]Τ6DC����.��(�]9�\�3[��1�U]g�vNHkt������#��J���ȝ��F�tVQq�Yx~����ebB�-
+                                                                                  ���F��R�������X�l!��Ζ����Ñ`<�4ƭ����dav?gL��}7��S_JtG1�M�w�c�$�t����f0��u��[�!��@����i�O����Vil�����
+                                                                                                                                                                                     B0H������
+
+                                                                                                                                                                                              �u!U��y@�V�vk�3I1�G���U�r1l���
+�dOe�%�p�p�ϩ�n#c�_e
+                   Ǵ��-������U��(�CQ:[`�<M{�.�����TӚ�e�1�c��� !���A�
+Y��Z����tB��R����cG�I|�$�(��Y�4o�U����L5X�ܿ�Z/0[�5��`����            t�A�R̢4N
+                                                        j0�o�����ֽ��)*�-�*�6���ݸ��M��:�?[8�z�����#w<�]�Z�n��p7o�5z4�_�?n(�ς�Hv<^K�G>����P�~�4\���)���Rw_0�\�F�¿�\��⛉�X兤�-������Xʽ)'p5�%8���0��=�}��٦�z������M�]�A,����B�H��mlZ�y21�kbt�
+                            i)*�i�d���Lw�3W�r:��
+���8(�+5Qg�|w�[j��h���Cҫ                        �t�daҳ]/��[sz�۶o�ӭy.f+3Ǭ�j�y��j�Pu��=�۫��
+                        ^I�VN�+�.����t�����w���3��M�wٸ!���J�q
+7XF�MƷ�Mt��%�C��[T��G?'P�`�զέ>x                              �)NТ���7+��o��b*(	
+                          h�A� ?�Cy[��� �؏�)��}��olV_������![��yʢ�9���+�T��0X Gx�2i�F������y}7������B:��i�ezÈ���H������a�����g����@)�o��i��H}'� �j1��Vd
+�)UM�k0I��2S ��X�;����%�\�t��i�a�B-"q�2�5"�W���{�Z ��^̔_���2�,���k�Z"����@����3�������t��y�2�^y�����AY�p1bz���g� 4Q���ĵ�Ûh�_���R���aV�w�!��P%W"�T�MJ8}�Q�D��i�vW`yI��~P�ݺvdD���,$	���i:<�F��,�f���ΐve&I�kB���T4���(]�҄<���?SW笚H�o�F���C�$�
+                                     �!yg�g�H�p��{�v�uq��k����Eb;������#���Q�Zdb=���D�٨��! �M]W>g�x��E
+                                                                                                      �`yi��/�(Qh�,;�6/E�9!ipo�5�6`��x3tl%Eԇ��P��u3.�9m��>���=�����r��C�i<�S5����{)Xiw-�U��=;��_���m�Z��Mef?Mo�0YR���ձ<j�+h)���VT��h�I��[�+4��}K<B���y���$|�ٕ�f\ޜqe*�*�+�Y�t`g�R��nM��������=K�Tr]Zo��Q��9	�3܉��j�Ja8
+                                                                                                          }B���ڋ�t	T�B�b�7�X�P'���`)����Q��s��,Q�ܽ�;x47��m�
+                                                                                                                                                               �;R� }�a	Խ}H����CS	���A.�?
+v˗�/Uil>
+]o�hHΡ����4�������lK��e}�F`]��`@/�c^ LAh=3G�U�o1��I<�ߚ�}w���l}�����4� 8���3�O�h�5�QR%q�ңC&&b����,t֩<�:f��BE������	�u���f�4z��z(�Uw�ƿS��#1S������}�40���R�).�ߛd�Or�^ˎ*�d���[�[����;�k���'�A�a�J��|�9)�pI���B���jfA���4�PT��������1aU�@�xq�
+@1�4��B�+�lv���7                    �)��o�-{v
+h����z��hER��M)H����0`��οT��R�_�4��O�8Wa�SN�Irt��fXzzO(U���ѴC�{��x_k���zOU^mh��;��|��XW�]��xwj�=)ٺ
+�^}��	(.�]�
+f�m���I��g�a�|R�4��6�8��ٽG����u֮�zi�G��9�^dߟ&\�#�4��y֗9�pdx�VF��R�w&�_Q��W��Ӵ()���;���g|���\�����č)U��#ɸ��/��$��'��)|���d��A����,V*.m
+                                                                                                                                    �!�6��g.o]]|W���̛Ĺe
+                                                                                                                                                       ����:��x:����Z�F�_1z�gF���A�w�Û%�M���bI���K%�8����U�F�Wօ������$�u24�s&%WC��(�b��q�<���.���]��#h#�I<�^�B�&�~����QX���A�����
+�X���.;].F�o<��t7�n
+                   �Tn9�י��I��n�u�ԡ�N���WS#��M�0a��t�d��8H��1ߢ
+bqr�XӘU�>�-�pe�[�E#ŠF���v<��K�؇��������}<@M�1��{��_/�IE�.�*ɵ������Dl�b~��4,�6��N:)c�����<�.���P<Ç��)Ǘ3
+                                                                                                      ���y���y�L�[���͒O?Iʘ!	0���!�d��s��氮�ɮ`
+                                                                                                                                                 Hg�y�M��{Y}�hg�-�sssyJ�
+�
+ *�JgM�Mz|�c����o(A���:T	Y֭�b4������h=]��)��"߿]O;J���'�a�ȼ�[��f��J�0�׏��-�QU����z(i�\|`�4��8�J
+
+                                                                                                    �v���(�A��_^XF)ZB.g��o^
+                                                                                                                           �a溿�\ظ��;8i�~�\�6I�YSlK���cՏ��,�m�fJ�_s I�"�J'�dy���!��W��;9'~�xUQ������B�8�D�-m��./z7�~�2�)ƌB��]E�+W�� f��RS�\�f���.A4�YڜP����-V
+U7�cx���Nћ��%�n�*�z^>�\s2�����S/gA�-g��Ǆ��L؍�?���Z={Ϋ�����Q{�vwg<%x��0�HGU٠k����g��u�!�_�枽�8MW}\�{��XJg`�ࡡ�� 1�rQ�ʙϚ��&M��x��=�=��؅f��F�l	�d�
+er��78'xzY<                                                                                            p���f�n1�'�QE����sv��m�����{���BR��
+g�*l���blsN��B���!��3���°:�~U^y�L�sY��Z�C@4d���x@nQߕ�
+                                                     y>�&~��}��,�NG7k����9�����"�xѼ/a�T�zaH�ai���W�.�{�+ۇ���DG��F��s?|�@_岴]q��	�.�O:
+                                                                                                                                     5���U�)]�b�L`
+                                                                                                                                                  ��|�u�>\��I��$�e-&wk���+�x���%���G�Q;h��H����z�S���+�es����[����9D��	�f��I�VX�Jߞ���[�h����
+Dg�{���6ei�[αI�3�E�,�O���Rt�ٻ{�Y�\�ow��[��!j��������W�������/'���K#�����<�b��;�N���
+go'�
+����SI����"#?�s��F[[�p �s)욱�<�4���x�Xz���4�����y�&^���ͱ�/1��ԅ�����(�[�	R�
+                                                                          L����D��d5�N�\�H1�Kt�.��1��H�,Ȃ&========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+H�q����+S�t��m3��jz\����'�B�>�c��l�S?k&Î���(��Z���_GmzӮ^�U�f:��
+                                                               ���fAz���k�ѭ�F�����jK��voI�=��i��u�㱮kc���z`�K.���<x����Wx�+�`�[�^u�|��h9�n�a�c-+�QTF�s���PU��Hm���\Uli,�<���Aҟ�Q̈���g��[�Z�JA5RKk
+�7K����ʁ����M��<�E�1��sv��8�xC!�( � �	
+                                     �S�L�S'$mOI��&}$�U�m��JS3��]V�
+�
+ @����Ď�w�2o�����m�����
+                       ���n��O]*����徔6դim�쵩\��Qm���_�>6�>%�cI_aDI�(�1�`T���<4t",��|4��h`���'Qʽ.&��
+                                                                                                    ���F�A{�i�<�4cXO�Φ��I��I�F��z�ckwd��?�fQ�}�^й�L�m֫C!�(h���F�{�B�2o���>k���M���U/��}��^�G��
+                                                                                                                                                                                             ��HQ}��o�=��0�/tM��� �
+        Pi�ń���{^�
+                  fڦ�p�
+                       ���J��l
+                              �ٕ�Ό��˚3����4Ѵ�ŀhp5�4��@VƼ����cj13c:?���*��%��
+
+                                                                           �o
+�`Y�2&�8�eTn�W#��u�h�i]�e?J�_��_����{�/����1UR�
+
+�b2+x�����@�z`tlR���o|8M]�L�n.�RQ��ۭ�3�.p4Hv�֖Os�WβRBȠτ��:?�c��!�lI��A5�SX^��p�b��8���B5g��XPՍ�՗���w��-E��H���R�&�!'�2�uC��#km���2C��TM��o�F�7q*�8W��u
+                                                                                                                                                    ���%�~UZ�.�)z<p�l8�U��f�=A.H&^����gb��V�@���+x#��`=I7R@�>�ƌފ�-.)��]�E���}R�:
+2���F�>��g쿱��<=�n�a#�������0R@R_�R��nH'���rϝ.�Mk�+"���>��l�UXy���6�"C}Jy�
+��3Zn�|���g�OU��2|�m�j鯀�ʀ�WR尢sK
+                                 �J�ͭ~��~KW?���rP���]�@�����b#Nzx$b���H�˷):��F"�K��BvZ�)&�k�R��!�vX�u(��#y��d��}�.H���RlG#t]Z}����G�_��C#
+                                                                                                                                        �Lt���C�zKze790�g�A��r]��,�fc��l�/+�0
+w�8�-�r�_G�P,.���f#��l�����J)���
+�Ӏ�@�}6�E+ �                    ��.�ҲΊ`;��3���B�A -���hX7��Nwk�x���G:�K�s����U���
+            :�h��:��o��|����z�
+3��ID���RUY���n�G�R��JzV1O�k�S�XEgp�{���_3"g��^���&�ʹ��4�S��6M�
+                                                               猍^j�@
+                                                                     O����َa>��fHbs?}��G���,5k�����	�<��T;��M"W�A�8����6�Q���@+�lc�~��i�2Q d�z
+
+                                                                                                                                                  �@�XB'�|z#j\Ɍ��&ؽ���k���X}DĪt
+                                                                                                                                                                               T�kT�aK���}Ц7;ܹ��a���1Qit�8ҭ��9�BH�$��Z���
+             a'b~��[0ÙjC��bxBB\u$������U�L�E��n��!�:]ǽ��^Q��-�ת���w(�d�����`��'�
+aZ�}O6R�p0����a��S+\�Ys���e�a5a�����~!�}Wn�՗�jv���6>f���d��m�u/����x�����%T0�
+                                                                              ,��
+                                                                                 9�+Z]���Dh����8Zpc	$FOxF[���©ս4�N�)����]��/��C��f�YiXf�����K<�:������;W;�y}���vO�
+                                                                                                                                                                      �V��0�F��4>��%	�f���g�Ͱ���ZC0�x����#D��J1��������l'E��>�Bs
+��Z��!�%�^��t>�	'�a~�P��U�����K}L
+                                 �p�Լ �!�y��A�
+G�%�d
+    �?\��7����}��'6	,"�0%�6�.��D7�X��Cv�U
+��Ð1��ANYwPCpk�Z�Ղ����ǀHu�?�~�H��.բ��A;m$W��y��fJ��,��Xk]E�g)���5�\��_/��oc�X\"'K�'���iN�@�T��W�kS�bh}s�&�����MD�w@�?�}'�Y�Z�Ӱ�71U���S�J�e��Z�P'uP�C�4;b�l�չ8��.�D�Ð}�[�>�2��	��W�J��UMC�@j�b!����֪���Ю}ךCh�Ru�P@j����(�����������	�饳��J��\-A:b�f2��5U������0;l��
+?ס}�J<�M��xj3�H��=�q�2��Z$`#�m;����i/a��߿��/�P���Rs �t\����ſ����b*��������폌��S���F��@2�$�7�A�����*�zHR�B�-�@�p��}��e��Z��A�:/p�T��	KA�sCtY���&���Z/1x+�BoU�ej8z�?�����
+�33\�w��Lnz��wS�^��f}$��͖����Ƒd���:�?�R���X�(i�2��E+n��@�
+D�I�i��lo�'���k;Z��/����h��1r�)<[�3XB(��<@G�̟���I�{_.��v�%���G ���m0���Ö��!`� ��L��.W��>�o�̎�W������v�e���HD�1KOAN������KQ�f,��7�bandit9@bandit:~$ strings data.txt
+Z/,_
+WW"&8
+2Qk)
+xWa_
+x?Xn
+//M$
+;yzEt!
+WpU~e
+`Rn,I
+VSXdK
+WB|{
+GhG$
+========== the*2i"4
+DUJmU
+ux.j
+=:G e
+8.jD
+)'0K
+9DLW
+f0"q
+zf~Z
+ flf
+a{KG
+lj}ZRO
+662Z
+.Y `04
+wUhy
+X38UL
+v"*-
+AxEf
+aeTh
+OeOS
+e}\"
+[72V]>e
+N+{G6Q
+7XK5
+B}T<d
+SQr.
+{8xG\
+|b;{
+Y4xsm
+-xnfv
+6@Bj
+-|38
+,F3&A
+iQ>Zc
+ r8C
+|wJ*"
+gtg~o6c
+&>\	7
+xk9~
+.,N?
+n~C!l
+LCbD
+wqND
+tmC>
+'<o-
+OxYF
+68}j
+Q~a`%
+========== password
+#|-l
+G}`:
+o]zb
+JbnhB
+:j9)
+t7qM
+9-q?9z
+gh'Kz
+uWO)
+dxG9
+e})nQ
+~}K{
+acer
+?.}@
+"*a%si*
+<I=zsGi
+&15h
+!G[\
+uOZ\K
+BYD1
+D2?	
+Z)========== is
+x[U*
+m/;7
+r%z$c
+C !n
+&/Lhh[}~s
+b$J})Q
+z3p)
+fRk4Ck
+Jq{`
+fVHi
+Y<_M
+88)%
+E>aS
+*S{"
+k<02
+i;C\\N
+t;afX
+:mJ\
+){.h
+ZcO3
+>K`t;X
+'p6:
+/g'x
+l6C4
+@17J
+V?**
+141>Y
+YZ+y
+K#VV
+|6Uj
+ckd^r
+zDshn:X
+A=|t&E
+n8os
+O\0	f	>
+]v#8
+2X[eO{
+TjIR\+
+qeY|
+I[aJtZH:
+LkfWdO5`
+pC:*
+X^+5
+Aiwj~
+	0^8]W
+4k1S
+BbYR
+:hk9
+ZpE5
+mWW#+\
+s/#m`
+*Ybc
+vNHkt
+tVQq
+S_JtG1
+CQ:[`
+63KS+
+Rw_0
+)'p5
+y.f+3
+G?'P
+olV_
+0X Gx
+6\Ni
+X$)4!
+B-"q
+p1bz
+P%W"
+W`yI
+ve&I
+Zdb=
+M]W>g
+9!ipo
+x3tl%E
+{)Xiw-
+Mef?Mo
+Tr]Zo
+;x47
+/Uil>
+c^ LAh=3G
+QR%q
+C&&b
+fXzzO(Ub
+.y#2
+LsyH
+R	w&
+,V*.m
+g.o]]|W
+]A2xd}M
+il,m
+.;].F
+}<@M
+N:)c
+sssyJ
+:T	Y
+_^XF)ZB.g
+;9'~
+\Jg`
+S/gA
+g<%x
+xzY<
+blsN
+~U^y
+x@nQ
+*SF=s
+}1:LF
+]vur
+Emlld
+&========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+_Gmz
+\Uli,
+A5RK
+S'$0
+<4t",
+4cXO
+cj13c:?
+&Yra
+zEwa
+b2+x
+z`tlR
+o|8M]
+.p4Hv
+)z<p
+S=A.H&^
+#hu#
+"C}Jy
+0R@R_
+~KW?
+b#Nzx$b
+RlG#t]Z}
+e790
+JzV1O
+XEgp
+2Q d
+z#j\
+1Qit
+a'b~
+bxBB\u$
+8Zpc	$FOxF[
+ANYwPCpk
+Xk]E
+bh}s
+P'uP
+\-A:
+sCtY
+Z/1x+
+ej8z
+P"`\XZ
+1KOA
+bandit9@bandit:~$ strings data.txt | grep ==
+========== the*2i"4
+========== password
+Z)========== is
+&========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
+bandit9@bandit:~$ exit
+logout
+Connection to bandit.labs.overthewire.org closed.
