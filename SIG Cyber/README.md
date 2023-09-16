@@ -172,5 +172,3 @@ Go to [CLassroom](https://play.picoctf.org/classrooms) and join with invite code
 
 * Transformation([pico gym](https://play.picoctf.org/practice/challenge/104?category=3&page=1))
 
-## Submission Deadline for SIG Cyber
-**_15/9/23_**
