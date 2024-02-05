@@ -7,17 +7,16 @@
   <h1 align="center">SIG CP<br>> Competitive Programming <</h1>
   
 </p>
-Competitve Programming is not just about coding, It comprises of 
+Competitive Programming is not just about coding, It comprises of 
 - learning
 - Problem analysis
 - Logic development
 - Data structures
 
 ## Here is the joining task for you
-  1. create a Hackerrank Account
-  2. Log on to [Hackerrank-Contest](https://www.hackerrank.com/acm-cp-tasks) and start solving the Problem
-  3. You can use any language of your choice and any reference sites
-  4. Solve as much as you can. Feel free to pause whenever you feel difficult, But don't stop.
+This time, we will be conducting a live contest! It will be conducted on Hackerrank, so make sure you have an account and start practising now.
+The contest link will be shared later.
+Good Luck!
 
 ## Keep these things in mind:
   1. **Evaluation-Free Zone**:
@@ -44,7 +43,7 @@ Competitve Programming is not just about coding, It comprises of
      
       Uphold honesty and integrity in all your endeavours. There's no room for cheating; authentic efforts are the key to genuine growth and achievement.
 
-## Submission Deadline for SIG AI
-**_15/9/23_**
+## Contest Date and Details:
+**to be updated later**
 
 
