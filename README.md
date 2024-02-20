@@ -14,6 +14,9 @@ Each SIG has their own specific deadline.
 - SIG Cyber : 17/3/23
 - SIG Web : 21/3/23
 
+## Submission Link:- 
+https://aseam.acm.org/join/submit
+
 ## Some reminders...
 
 - *Google is going to be a very dear friend, not only for these tasks but throughout your career, so it's best to learn how to efficiently Google*
