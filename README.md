@@ -7,8 +7,12 @@
   <h3 align="center">ACM Student Chapter - Amritapuri<br>Task List - 2023</h3>
 </p>
 
-## Announcement
-Please note that the deadline for AI, CP, and Cyber has been postponed to ***17/9/23***, 11:59 pm.
+## Submission Deadline
+Each SIG has their own specific deadline.
+- SIG AI : 17/3/23
+- SIG CP : 11/3/24 (Contest Date)
+- SIG Cyber : 17/3/23
+- SIG Web : 21/3/23
 
 ## Some reminders...
 
@@ -16,103 +20,6 @@ Please note that the deadline for AI, CP, and Cyber has been postponed to ***17/
 - *These tasks are for you to explore the wide world of Computer Science and not just a "Get it over with..." task list. Explore what areas capture your interest*
 - *Don't try and cheat, for your own good, it just defeats the purpose*
 - *We are always here to help you, just contact us. You might not get a direct answer, but you will absolutely be pointed in the right direction*
-
-## The Tasks
-
-- [Create a GitHub and LinkedIn Account](#task-0)
-- [Set up a Code Editor](#task-1)
-- [Having Fun with Logic Gates](#task-2)
-- [Code Area](#task-3)
-- [SIG Task](#task-4)
-
-
-## Task 0
-### Create a GitHub and LinkedIn Account
-Why make a GitHub and LinkedIn Account?
-
-**GitHub:**
-- Version control for code.
-- Portfolio to display coding skills.
-- Collaboration on projects.
-- Open-source contributions.
-
-*Look into using Git purely from your terminal, it's pretty eye-opening for most beginners to open source.*<br>
-*If you are facing any issues in creating a GitHub account, Connect to your mobile hotspot instead of campus wifi and try again*
-
-**LinkedIn:**
-- Professional networking.
-- Online resume for employers.
-- Job search and opportunities.
-- Industry insights and news.
-- Skill endorsements and recommendations.
-
-
-## Task 1
-### Set up a Code Editor (VSCode Preferred)
-
-**What is a Code Editor ?**
-
-- A code editor is nothing but a text editor that is specialized for writing software. It may be a stand-alone program or part of an integrated development environment (IDE). They make writing and reading the source code easier by differentiating the elements, so the programmers can view their code.
-- It is an integral part of any programmer's toolbox.
-- Most prefer to use VSCode for its support of a wide range of languages, as well as its extensions and integrations
-- This link should get you started : [Download VSCode](https://code.visualstudio.com/download)
-
-## Task 2
-### Having Fun with Logic Gates
-
-**What are Logic Gates?**
-
--   [Logic Gates](https://whatis.techtarget.com/definition/logic-gate-AND-OR-XOR-NOT-NAND-NOR-and-XNOR) are the building blocks to every digital circuit ever built
-
--   You seeing this task from a computer? There are logic gates in each and every part of your computer.
-
--   Logic Gates form the basis for the digital era that we are living in
-
-**Why learn Logic Gates?**
-
--   Computers only understand two things : 0's and 1's
-
--   Well there isn't much we can do with a few zeros and a few ones right?
-
--   And you'd be right. What can anyone do with nothing but 1000101?
-
--   So, this is where logic gates come into play
-
--   Logic Gates are decision makers. They take a bunch of 0's and 1's and perform operations on them
-
--   Everything from a simple calculator to a satellite rely heavily on these logic gates to perform tasks
-
-Simulate and design every one of the standard logic gates on an online Simulator like [TinkerCAD](https://www.tinkercad.com/)
-
-However, if you're a very cultured person like the good folks at ACM, design all of the logic gates in .... *drumroll please* [MINECRAFT](https://educommunity.minecraft.net/hc/en-us/articles/360047116432-Try-Minecraft-Education-Edition-for-free)
-
-We've provided a link to the trial of Minecraft Education Edition if you feel like trying it out. Use your Amrita mail ID to sign up for the trial.
-
-**How do you get started with designing Logic Gates?**
-
-Let your creativity flow for this task. Learn the standard logic gates and simulate them! How you get it done doesn't matter. The knowledge you gain through this does! Note that this would be reviewed during your interview.
-
-
-## Task 3
-### Code Area
-This is a good place to try out your code editor / IDE as well as your coding skills...
-- [Problem 1](https://www.hackerrank.com/challenges/fp-sum-of-odd-elements)
-
-  If you are using any of the language which is not accepted for the above problem, upload your code file in your GitHub submission repo.
-- [Problem 2](https://www.hackerrank.com/challenges/simple-array-sum)
-- [Problem 3](https://www.hackerrank.com/contests/projecteuler/challenges/euler001/problem)
-- [Problem 4](https://www.hackerrank.com/contests/projecteuler/challenges/euler002/problem)
-- [Problem 5](https://www.hackerrank.com/contests/projecteuler/challenges/euler003/problem)
-
-*Feel free to do more of these problems / explore more interesting problems in the never-ending problem archives*
-
-
-## Task 4
-Solve the tasks for the SIG you chose !! :metal:
-- [SIG AI](https://github.com/ACM-Amrita-Amritapuri/starter-tasks/tree/main/SIG%20AI)
-- [SIG CP](https://github.com/ACM-Amrita-Amritapuri/starter-tasks/tree/main/SIG%20CP)
-- [SIG Cyber](https://github.com/ACM-Amrita-Amritapuri/starter-tasks/tree/main/SIG%20Cyber)
-- [SIG Web](https://github.com/ACM-Amrita-Amritapuri/starter-tasks/tree/main/SIG%20Web)
 
 ## Creating Your Submission Repo
 <div><h3>1. Click on Repositories…</h3>
@@ -138,9 +45,6 @@ Solve the tasks for the SIG you chose !! :metal:
 <br/>
 
 ## Submission Repo Format
-- Repo Content
-![image](https://github.com/ACM-Amrita-Amritapuri/starter-tasks/assets/97865229/0cc9f662-0a14-489b-9cd1-5f204d93a201)
-
 - Repo ReadMe File
 ![image](https://github.com/ACM-Amrita-Amritapuri/starter-tasks/assets/97865229/a7b7348a-6e06-4b04-ad8a-35e9a98a87e5)
 
@@ -149,27 +53,27 @@ https://aseam.acm.org/join/submit
 
 ## Submission Deadline
 Each SIG has their own specific deadline.
-- SIG AI : 17/9/23
-- SIG CP : 17/9/23
-- SIG Cyber : 17/9/23
-- SIG Web : 21/9/23
+- SIG AI : 17/3/23
+- SIG CP : 11/3/24 (Contest Date)
+- SIG Cyber : 17/3/23
+- SIG Web : 21/3/23
 
 
 
 ## Contacts
 ###### SIG-AI:
--     Dhruv R Krishnan                            Hari Sankar
+-     Dhruv R Krishnan                            Lokesh Yarramallu
       AI Lead                                     AI Mentor
-      9880611945                                  8714509489
+      9880611945                                  7095419591
 ###### SIG-CP:
--     Maanav Thalapilly                           Sudhin S
-      CP Lead                                     CP Mentor | AI Guide
-      9746301081                                  9961557857
+-     Maanav Thalapilly                           Gowri P Shenoy
+      CP Lead                                     CP Mentor
+      9746301081                                  8547344344
 ###### SIG-Cyber:
--     Aadithyan Raju
-      Cyber Lead
-      9562341272
+-     Aadithyan Raju                              Akhil Menon
+      Cyber Lead                                  Cyber Mentor
+      9562341272                                  9400646772
 ###### SIG-Web:
--     Abhishek A B                                Arjun C
-      Web Lead                                    Web Mentor
-      6282599335                                  8848798837
+-     Akhil Menon                                 Adithya S Nair
+      Web Mentor                                  Web Mentor
+      9400646772                                  8136859455
