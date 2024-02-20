@@ -14,7 +14,7 @@ Competitive Programming is not just about coding, It comprises of
 - Data structures
 
 ## Here is the joining task for you
-This time, we will be conducting a live contest! It will be conducted on Hackerrank, so make sure you have an account and start practising now.
+This time, we will be conducting a live contest! It will be conducted on Hackerrank, so make sure you have an account and start practicing now.
 The contest link will be shared later.
 Good Luck!
 
@@ -44,6 +44,8 @@ Good Luck!
       Uphold honesty and integrity in all your endeavours. There's no room for cheating; authentic efforts are the key to genuine growth and achievement.
 
 ## Contest Date and Details:
-**to be updated later**
+**Date:-** 11/3/24
+
+**Time:-** 5:30 pm - 7 pm
 
 
