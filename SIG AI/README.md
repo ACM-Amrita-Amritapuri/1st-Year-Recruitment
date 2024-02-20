@@ -70,4 +70,4 @@ Objective: Gain an understanding of the basics of Deep Learning, focusing on fee
 
 **Submission**: The submission will be done through a separate submission link where you will have to submit your GitHub link of the tasks.
 
-**Deadline** :   **_//24_**
+**Deadline** :   **_17/3/24_**
