@@ -65,11 +65,16 @@ before you get started , here's some fun sites to learn css/js 💡
 8. deploy your expertise in data visualization! develop a [streamlit](https://towardsdatascience.com/data-apps-with-pythons-streamlit-b14aaca7d083) application that showcases the [titanic survival dataset](https://www.kaggle.com/competitions/titanic) in a captivating table. 
 ## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tasks>
 
+## Project
+
+Complete 1 project of each of the following:
+- HTML
+- CSS
+- JS
 
 
 
 _have a great coding sesh ahead ✨_
-
 
 ## submissionFormat.tsx
 - task naming convention: for each completed task, use the following format: 📝  `acmweb-ascendant--task1` for the first task in ascendant.
@@ -77,4 +82,4 @@ _have a great coding sesh ahead ✨_
 - create a pdf document with each project's github link and demo link `if deployed` or `screenshots`
 
 ## Submission Deadline for SIG Web
-**_21/9/23_**
+**_17/3/24_**
