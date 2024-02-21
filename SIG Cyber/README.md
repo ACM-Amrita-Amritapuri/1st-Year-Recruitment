@@ -1,11 +1,22 @@
+<p align="center">
+<!-- 
+<a href="https://aseam.acm.org/">
+    <img src="" alt="Logo" width=30%>
+  </a>
+-->
+  <h1 align="center">SIG Cyber</h1>
+</p>
+
+
 # Set-1
 
 <u>Objective</u> : Strengthening Linux Fundamentals
 
 Try the three rooms given below:
-(Part1)[https://tryhackme.com/room/linuxfundamentalspart1]
-(Part2)[https://tryhackme.com/room/linuxfundamentalspart2]
-(Part3)[https://tryhackme.com/room/linuxfundamentalspart3]
+- (Part1)[https://tryhackme.com/room/linuxfundamentalspart1]
+- (Part2)[https://tryhackme.com/room/linuxfundamentalspart2]
+- (Part3)[https://tryhackme.com/room/linuxfundamentalspart3]
+
 **Make a list of the commands learnt**
 
 After Going through room try solving challenges from (Bandit)[https://overthewire.org/wargames/bandit/bandit0.html] upto level 25.
