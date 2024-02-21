@@ -65,7 +65,7 @@ before you get started , here's some fun sites to learn css/js 💡
 8. deploy your expertise in data visualization! develop a [streamlit](https://towardsdatascience.com/data-apps-with-pythons-streamlit-b14aaca7d083) application that showcases the [titanic survival dataset](https://www.kaggle.com/competitions/titanic) in a captivating table. 
 ## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tasks>
 
-## Project
+## Project - Optional
 
 Complete 1 project of each of the following:
 - HTML
