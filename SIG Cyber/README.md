@@ -13,9 +13,12 @@
 <u>Objective</u> : Strengthening Linux Fundamentals
 
 Try the three rooms given below:
-- (Part1)[https://tryhackme.com/room/linuxfundamentalspart1]
+- (Part1)[https://tryhackme.com/room/linuxfundamentalspart1] <br>
+**Note: For Part 2 & 3:**  If it is shown as paid, please do skip Part2 and Part3.
 - (Part2)[https://tryhackme.com/room/linuxfundamentalspart2]
 - (Part3)[https://tryhackme.com/room/linuxfundamentalspart3]
+
+
 
 **Make a list of the commands learnt**
 
