@@ -10,9 +10,9 @@
 ## Submission Deadline
 Each SIG has their own specific deadline.
 - SIG AI : 17/3/23
-- SIG CP : 11/3/24 (Contest Date)
+- SIG CP : 12/3/24 (Contest Date)
 - SIG Cyber : 17/3/23
-- SIG Web : 21/3/23
+- SIG Web : 17/3/23
 
 ## Submission Link:- 
 https://aseam.acm.org/join/submit
