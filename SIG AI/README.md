@@ -1,73 +1,52 @@
 <p align="center">
-<!-- 
-<a href="https://aseam.acm.org/">
-    <img src="" alt="Logo" width=30%>
-  </a>
--->
+  <img src="https://github.com/LokeshYarramallu/starter-tasks/assets/75054074/486bd256-c635-465f-9273-9958806d602d" alt="image" width="8%" height="8%">
   <h1 align="center">SIG AI</h1>
+
 </p>
 
-## Platform
-- Google Colab
-
-For more information on how to use Colab, you can refer to https://www.youtube.com/watch?v=i-HnvsehuSw.
 
 
-## AI Task 0 - Kaggle Courses
-Objective: Complete the Introduction and Intermediate Machine Learning modules on Kaggle and obtain certificates for each course.
-1.	Create a Kaggle Account: If you haven't already, create an account on Kaggle (https://www.kaggle.com/).
+## AI Task 1 – Deep Learning
 
-2.	Complete Courses:
-•	Introduction to Machine Learning
-•	Intermediate Machine Learning
-3.	Certificate Submission: Upon completion of each course, download the certificate of completion.
-**Submission**: Upload both certificates (.pdf or .jpg format) as proof of completion.
+### Objective
+- Complete the Introduction to Deep Learning Module in Kaggle.
+- Build a small DNN architecture and train the model using a random Image Classification Dataset.
 
+### Submission
+Create a "Task1" folder in your submission repository.Upload the completion certificate and Jupyter Notebook of your implementation.
 
+## AI Task 2 – Using trained models
 
-## AI Task 1 - Classification Algorithms
-Objective: Explore classification algorithms using a dataset from the UCI Machine Learning Repository.
-1.	Dataset Selection: Choose a classification dataset from the UCI Machine Learning Repository (https://archive.ics.uci.edu/ml/index.php). Select a dataset that interests you and has clear
-classification labels.
-2.	Data Preprocessing: Perform necessary data preprocessing steps such as handling missing values, encoding categorical variables, and scaling features.
-3.	Classification Algorithms: Apply various classification algorithms such as Logistic Regression, Decision Trees, Random Forest, Support Vector Machines, k-Nearest Neighbours, etc.
-4.	Model Evaluation: Compare the performance of different classifiers using appropriate evaluation metrics such as accuracy, precision, recall, F1-score, and ROC curves.
-**Submission** : Prepare a Jupyter notebook (.ipynb) documenting your analysis, including code, visualizations, and interpretations.
+### Objective
+- Select a well-known or preferred LLM model (GPT, LLaMa, Mistral, Gemini, etc.) from any of the open sources (Hugging face, Git, Kaggle, etc.). Offline/API is accepted.
+- Create a chat interface using Streamlit or any preferred GUI tool.
+- Develop an interactive Chatbot utilizing the selected model and GUI. Clearly elaborate on the model details, description, and source in a PDF within the project folder.
 
+### Submission
+Push the entire project folder as Task2 into your GitHub repository. Include a brief video demonstrating Bot interaction in Markdown. Exclude model weights from the folder if they exceed a heavy size.
 
-## AI Task2 - Implementing Classifiers
-Objective: Implement your own classifiers - Linear Regression and Naive Bayes - in Python or MATLAB.
-1.	Linear Regression Classifier:<br>
-•	Implement a simple linear regression classifier from scratch using Python or MATLAB.<br>
-•	Utilize gradient descent or any other optimization technique for parameter estimation.<br>
-•	Test the classifier on a synthetic dataset or a real-world dataset.
+## AI Task 3 – Transfer Learning
 
-3.	Naive Bayes Classifier:<Br>
-•	Implement a Naive Bayes classifier from scratch using Python or MATLAB.<br>
-•	Handle discrete and continuous features appropriately using the naive Bayes assumption.<br>
-•	Test the classifier on a suitable dataset and evaluate its performance.
+### Objective
+- Select a model (YOLO, Res-Net, SSD) of your choice and do the transfer learning on the model with a random object detection Dataset taken from Kaggle, UCI, etc.
+- Evaluate model performance and metrics, providing a concise overview of the model architecture and a thorough explanation of each step in adjacent Markdown.
 
-**Submission** : Provide the implementation code for both classifiers along with a brief explanation of the algorithms and results obtained.
+### Submission
+Along with the above tasks, the following Notebook should be pushed in a Task3 folder in your submission Git Repo.
 
+**NOTE**: Make sure to organize your submission according to the given instructions. If you have any questions or need clarification, feel free to ask. The submission will be done through a separate submission link where you will have to submit your GitHub link of the tasks.
 
-## **Bonus Task** - Introduction to Deep Learning
-Objective: Gain an understanding of the basics of Deep Learning, focusing on feedforward neural networks.
-1.	Explore Deep Learning Concepts:<br>
-•	Learn about the fundamentals of Deep Learning, including neural networks, activation functions, loss functions, and optimization algorithms. <br>
-•	Understand the architecture of a feedforward neural network, including input layer, hidden layers, and output layer.
-
-3.	Implement a Simple Feedforward Network:<br>
-•	Build a simple feedforward neural network using a deep learning framework like TensorFlow or PyTorch.<br>
-•	Train the network on a toy dataset or a simple classification problem.
-
-5.	Review and Analysis:<br>
-•	Write a review summarizing your understanding of the training process in a feedforward neural network.<br>
-•	Explain key terms such as forward pass, backward pass, gradient descent, epochs, and batch size.<br>
-•	Reflect on challenges faced and insights gained during the implementation.
+<p align="right">
+    <em><b>Queries</b></em><br>
+    <em>Dhruv R K ( 9880611945 )</em><br>
+    <em>Lokesh Y ( 7095419591 )</em> <br><br>
+    <em><b>Deadline</b> :   _//24_ </em>
+</p>
 
 
-## Submission Deadline for SIG AI
 
-**Submission**: The submission will be done through a separate submission link where you will have to submit your GitHub link of the tasks.
+<p align="center">
+<b>ALL THE BEST</b>
+</p>
 
-**Deadline** :   **_//24_**
+
