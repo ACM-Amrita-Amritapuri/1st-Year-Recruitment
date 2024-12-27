@@ -1,85 +1,181 @@
-<p align="center">
-<!-- 
-<a href="https://aseam.acm.org/">
-    <img src="" alt="Logo" width=30%>
-  </a>
--->
-  <h1 align="center">SIG Web</h1>
-</p>
+# ACM Recruitment 1st-Year Tasks
 
-hitchike your way into the realm of the interconnected web.  💻
+## Task 1: Personal Portfolio Page
 
-## pre-requisites
-- git and github basics 
+**Domain:** Web  
+**Stack:** HTML, CSS
 
-    learn git commits and branching through this [cool game](https://learngitbranching.js.org/) 🎮
+### Abstract:
+Create a personal portfolio webpage showcasing your skills, projects, and contact information. Use HTML for structure and CSS for styling.
 
--  follow the acm github 🌟
+### Features:
+- **Header:** Include your name and a navigation menu.
+- **About Me Section:** A brief introduction and description of your skills and background.
+- **Projects Section:** Showcase 2–3 projects you have worked on, with images and descriptions.
+- **Contact Section:** Include a contact form with fields like name, email, and message.
+- **Footer:** Add links to your social media profiles or GitHub.
 
-##### `❗submission of all tasks are not mandatory but will give you leverage during selection`
-
-
-## 1️⃣ introduction.js
-
-`we've lined up 8 tasks to get your hands dirty with upcoming and popular technologies in this domain.`
-
-before you get started , here's some fun sites to learn css/js 💡
-      
-- leap into flexbox  🐸: guide froggies to their lily pads and master css flexbox   [here!](https://flexboxfroggy.com/)
-
-- unleash your mind 🚀: dive into the captivating world of [untrusted](https://alexnisnevich.github.io/untrusted/) and rewrite the rules while mastering coding puzzles on js! 
-
-- unveil ethereum's secrets ⛓️: conquer smart contract vulnerabilities and navigate blockchain challenges with [ethernaut!](https://ethernaut.openzeppelin.com/)
-
-
-
-## 2️⃣ < tasks >
-
+**Important:** The website should be responsive!
 
 ---
 
-### ascendant 🀅
-1. craft a static webpage using html and css which serves as a personal portfolio of your works,skillset and interest.
- 
+## Task 2: Photo Gallery Website
 
+**Domain:** Web  
+**Stack:** HTML, CSS, JavaScript
 
+### Abstract:
+Create a Photo Gallery Website that allows users to browse and view a collection of photos. The application should include image categorization, a slideshow, and search functionality.
 
-2. let wanderlust flow through your fingers as you create a webpage showcasing your dream destinations using `html and css.` 
+### Core Features:
+- **Image Categories:** Organize photos into categories (e.g., nature, portraits, architecture) and display categories on the homepage for easy navigation.
+- **Slideshow/Carousel:** Allow users to view photos in a slideshow or carousel format. Include navigation controls (next, previous, play/pause).
+- **Search Functionality:** Enable users to search for images by name, tag, or category.
 
-3. set off on an interstellar journey through an API-powered hub dedicated to space exploration. connect with the cosmos using APIs like [NASA's Astronomy Picture of the Day](https://data.nasa.gov/Space-Science/Astronomy-Picture-of-the-Day-API/ez2w-t8ua).  &nbsp;craft an interface that  showcases  images,  explanations, and  cosmic facts.
+### User Interface:
+- Design a visually appealing and responsive interface.
+- Use grid or flexbox layouts to display the images neatly.
 
-4. summon your favorite series or movie lines with an html page that displays random fun quotes.utilize apis like the [brooklyn nine-nine quotes api](https://rapidapi.com/JacksonBright/api/brooklyn-nine-nine-quotes) for inspiration. 
+**Tech Stack:**
+- **Frontend:** HTML, CSS, JavaScript
+  - HTML: Structure the web pages (gallery, search bar, categories).
+  - CSS: Style the website with a focus on responsiveness and user experience.
+  - JavaScript: Add interactivity, such as search functionality, slideshow navigation, and image filtering.
 
+---
 
-### immortal 🀄
+## Task 3: Expense Tracker
 
-5. craft a web app that's all about authors. use any framework to make a basic search, it should connect to a  **database** and retrive book names of author to be searched.  `def hint() : start with firebase for ease of use`
+**Domain:** Web  
+**Stack:** HTML, CSS, JavaScript
 
-6. create a web page that awakens the power of augmented reality (ar). harness the forces of _a-frame's <a-marker>_ component or three.js's ar.js integration to conjure a virtual world that interacts with a specific ar marker. be creative in creating this web-app.
+### Abstract:
+Create an expense tracker that allows users to input their expenses, categorize them, and view a summary of how much they've spent.
 
-7. design a photo gallery that allows us users search for photos using keywords with `reactjs`. bonus : the users can also adjust the categorization using provided selections like mountains, beaches etc. remember, you are the curator of your journey. 
-[watch this video for help](https://www.youtube.com/watch?v=yUau8xImmK0)
+### Features:
+- **Add Expenses:** Users can add the amount, category, and description for an expense.
+- **Category Filter:** Allow users to filter expenses by category (e.g., food, transportation, entertainment).
+- **Total Calculation:** Show a running total of expenses.
+- **Delete Expenses:** Users can remove an expense when it’s no longer needed.
+- **Data Persistence:** Store the data using localStorage to keep track of expenses between page reloads.
 
- `use carousel and other libraries from npm for desigining`
+---
 
-8. deploy your expertise in data visualization! develop a [streamlit](https://towardsdatascience.com/data-apps-with-pythons-streamlit-b14aaca7d083) application that showcases the [titanic survival dataset](https://www.kaggle.com/competitions/titanic) in a captivating table. 
-## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tasks>
+## Task 4: Recipe Finder – Personalized Recipe Recommendation Web Application
 
-## Project - Optional
+**Domain:** Web  
+**Stack:** HTML, CSS, JavaScript, Recipe APIs
 
-Complete 1 project of each of the following:
-- HTML
-- CSS
-- JS
+### Abstract:
+Recipe Finder is a web application designed for food lovers to explore new and personalized recipes from different cuisines worldwide. The app features a recommendation engine that suggests recipes based on users' preferences, dietary restrictions, and available ingredients.
 
+### Features:
+- **User Input Form:** Allow users to specify preferences such as cuisine type, dietary restrictions, and favorite ingredients.
+- **API Integration:** Fetch recipes from external Recipe APIs, parsing the response to display relevant details such as recipe name, image, ingredients, and instructions.
+- **Recipe Display:** Present the recommended recipes in a list or grid format, including the name, image, ingredients, and a link to full instructions.
+- **Save to Favorites:** Implement a feature to allow users to save their favorite recipes to localStorage.
+- **Search Option (Optional):** Add a search option to filter results by ingredients or cuisine type.
 
+---
 
-_have a great coding sesh ahead ✨_
+## Task 5: Weather App – Real-Time Weather Data Display
 
-## submissionFormat.tsx
-- task naming convention: for each completed task, use the following format: 📝  `acmweb-ascendant--task1` for the first task in ascendant.
-- commit and push: after completing a task, commit and push the file to your github repository. ensure the repository is public. 🚀
-- create a pdf document with each project's github link and demo link `if deployed` or `screenshots`
+**Domain:** Web  
+**Stack:** OpenWeather API (or any weather API), React
 
-## Submission Deadline for SIG Web
-**_17/3/24_**
+### Abstract:
+Create a simple weather application in React that fetches real-time weather data for a user-specified location. The app should display current weather information such as temperature, humidity, wind speed, and weather conditions.
+
+### Features:
+- **User Input:** Allow users to enter a city or location to get weather data.
+- **API Integration:** Fetch weather data from a weather API (like OpenWeather API).
+- **Weather Display:** Display temperature, weather conditions, humidity, and wind speed.
+- **Optional Features:** Show a weather icon and a 5-day forecast.
+
+---
+
+## Task 6: Random Joke Generator – Display Random Jokes
+
+**Domain:** Web  
+**Stack:** React, Joke API
+
+### Abstract:
+Build a simple React app that fetches a random joke from an external joke API and displays it to the user.
+
+### Features:
+- **Fetch Jokes:** Fetch jokes from an external joke API.
+- **Display Joke:** Display the fetched joke in the app.
+- **Button Interaction:** Implement a "Get New Joke" button that fetches and displays a new joke each time it's clicked.
+
+---
+
+## Task 7: URL Shortener
+
+**Challenge Description:**
+Create a Basic URL Shortener Web App that allows users to shorten long URLs.
+
+### Features:
+1. Accept a long URL as input and generate a unique, shorter version.
+2. The shortened URL should redirect users to the original URL when accessed.
+3. Display a list of all created URLs along with their original links and click counts.
+
+### Bonus (Optional):
+- QR code generation
+- Local storage to store links or Firebase
+
+---
+
+## Task 8: Notes Taking Web App
+
+**Challenge Description:**
+Build a responsive Notes Taking Web App using HTML, CSS, and JavaScript.
+
+### Features:
+1. Add new notes.
+2. Edit existing notes.
+3. Delete notes.
+4. Persist notes data using local storage.
+
+### Bonus (Optional):
+- Dark Mode
+- Add priority levels
+- Search functionality
+
+---
+
+## Task 9: Dictionary App
+
+**Description:**
+Build a simple dictionary app that fetches word definitions using an API.
+
+### Requirements:
+- Use the Dictionary API.
+- Take a word as input and display:
+  - Its definition(s)
+  - Example usage (if available)
+  - Phonetic pronunciation
+
+### Bonus Features:
+- Play an audio pronunciation of the word.
+
+---
+
+## Task 10: Habit Tracker Dashboard with Streaks (Optional Task)
+
+**Description:**
+Create a Habit Tracker App that helps users track their daily habits, monitor their streaks for consistency, and visualize habit trends with charts.
+
+### Requirements:
+1. **User Interface:** Add Habit, Mark Habit Completion, Habit List.
+2. **Streaks and Analytics:** Streaks and visualization using charts.
+3. **Persistent Data:** Local Storage or simple Backend.
+
+### Bonus Features:
+1. Multiple Users.
+2. Badges for continuous streaks.
+3. Social Sharing: Allow users to share habit streak.
+
+**Tech Stack:**
+- ReactJS, Chart.js, Recharts for Frontend
+- Backend (optional)
+- State Management

@@ -1,0 +1,9 @@
+Java Reversing
+Is reversing possible for java
+does java have inbuilt reversing function
+
+
+C reversing
+Are you quite good a Assembly
+Decrypt the basic C-executable file
+Hint : Debuggers, Decompiler, Disassembler
