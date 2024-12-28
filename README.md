@@ -25,8 +25,8 @@ Here are some tasks for you to get started with; make sure you learn along the w
 ---
 
 ### 2. **AI and Machine Learning (SIG-AI)**  
-- Check out the four tasks given in the SIG AI section
-- Complete all given tasks and Submit as per the mentioned guidelines with a detailed documentation
+- Check out the tasks given in the SIG AI section
+- Complete all given tasks and Submit as per the mentioned guidelines with detailed documentation
 - https://github.com/ACM-Amrita-Amritapuri/1st-Year-Recruitment/blob/main/SIG%20AI/README.md   
 
 **Contact:**  
