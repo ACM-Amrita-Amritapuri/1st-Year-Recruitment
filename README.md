@@ -25,9 +25,9 @@ Here are some tasks for you to get started with; make sure you learn along the w
 ---
 
 ### 2. **AI and Machine Learning (SIG-AI)**  
-- Implement a basic Linear Regression using Python.  
-- Explore any ML dataset from Kaggle and analyze it.  
-- Bonus: Try a beginner-level Kaggle competition.  
+- Check out the four tasks given in the SIG AI section
+- Complete all given tasks and Submit as per the mentioned guidelines with a detailed documentation
+- https://github.com/ACM-Amrita-Amritapuri/1st-Year-Recruitment/blob/main/SIG%20AI/README.md   
 
 **Contact:**  
 - Lead: Lokesh Y (7095419591)
