@@ -97,6 +97,16 @@ Understand basic PyTorch operations like tensor manipulation, matrix operations,
    - Create a tensor of shape (6, 4) using random values and reshape it to shape (3, 8)
    - After reshaping, extract a slice (e.g., the first two columns, all rows)
    - Explain: What reshaping does and how slicing helps to extract specific parts of the tensor
+  
+## Task 5: CODE IT
+### Objective
+Complete these in LeetCode and add the SS in the git-repo
+[Container with most water](https://leetcode.com/problems/container-with-most-water/), [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)
+[H Index](https://leetcode.com/problems/h-index/?envType=study-plan-v2&envId=top-interview-150)
+
+## BONUS TASK ( RECOMMENDED )
+Develop a tool that accepts an image as input, processes it using the GEMINI API, and generates a caption describing the image content.
+( **WE RECOMMEND YOU TO TRY OUT THE BONUS TASK** )
 
 ## Submission Guidelines
 
@@ -112,3 +122,5 @@ Understand basic PyTorch operations like tensor manipulation, matrix operations,
    - Separate folders for each task (Task 1, Task 2, etc.), with respective files clearly named
 
 Please ensure that the notebook or code is well-commented and easy to understand.
+Please feel free to contact us to complete the tasks...
+
