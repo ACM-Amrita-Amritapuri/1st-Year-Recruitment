@@ -1,41 +1,63 @@
-cyber tasks
+# Cybersecurity Tasks - ACM
 
+## Reversing Task 1
 
-1. The Reversing task 1
-The file provided is an excutable file in machine language that’s or partial binary 
- To get a detail idea of the excutable file we can use Online decompliers which decompile the excutable file using different sources such as gidra ,binary ninja
-The best source to use inbuit code reverser are Gdb and external application such as IDA
-GDB consider for linux based debugger in Assembly 
-IDA consider for Windows
+The provided file is an executable in machine language or partial binary. To get a detailed idea of the executable file, use online decompilers or specialized tools. Recommended tools include:
 
-[requirement.c]
-walkthrough reversing task 1 windows
+- **Ghidra**: Open-source reverse engineering tool.
+- **Binary Ninja**: Binary analysis platform.
+- **GDB**: Linux-based debugger for assembly.
+- **IDA Pro**: Windows-based debugger and decompiler.
 
+### Walkthrough (Windows)
+To reverse engineer the file in a Windows environment, refer to `[requirement.c]`. Use tools like **IDA Pro** or **x64dbg** for in-depth analysis.
 
-2. [solution.py, code.py] - this is from cryptography
+---
 
-3. xss tasks [Propmt(1)](https://prompt.ml)
+## Cryptography Task
 
-4. [challenges]
+The file `[code.py]` contains cryptographic operations. Review the code to understand the algorithms implemented (e.g., AES, RSA, etc.). Analyze encryption and decryption functions for logic and potential vulnerabilities.
 
-5. try getting into this machine and get the password.
-download the folder. then open [mustang.vbox] 
-[vuln machine](https://drive.google.com/drive/folders/1jgH_0AMWVwTxRdLtWaj7VfWPq1h0yyec?usp=drive_link)
+---
 
+## XSS Tasks (Prompt 1)
 
-6. owasp juice shop [tryhackme]
-[Owasp Juice shop](https://tryhackme.com/r/room/owaspjuiceshop)
+### Challenges
 
-7. pwn college do tasks1-10
-[pwn college](https://pwn.college/computing-101/assembly-crash-course/)
+1. **Machine Access**:
+   - Try accessing the machine to retrieve the password.
+   - Download the folder and open `[mustang.vbox]`, a vulnerable machine file.
+   - Analyze vulnerabilities and exploit them as needed.
 
-8. Java Reversing
-Is reversing possible for java
-does java have inbuilt reversing function
+2. **OWASP Juice Shop**:
+   - Complete tasks on the **TryHackMe OWASP Juice Shop**.
 
-C reversing
-Are you quite good a Assembly
-Decrypt the basic C-executable file
-Hint : Debuggers, Decompiler, Disassembler
+3. **Pwn College**:
+   - Solve tasks 1 to 10 on **Pwn College**.
 
-[tasks]
+---
+
+## Reversing Challenges
+
+1. **Java Reversing**:
+   - Explore the feasibility of reversing Java programs.
+   - Investigate if Java has inbuilt reversing functions.
+
+2. **C Reversing**:
+   - Analyze a basic C-executable file.
+   - Use tools like:
+     - Debuggers (e.g., **GDB**, **x64dbg**).
+     - Decompilers (e.g., **IDA Pro**, **Ghidra**).
+     - Disassemblers for low-level analysis.
+
+---
+
+## Tasks Summary
+
+- Reverse engineer the executable file.
+- Analyze cryptographic code in `[code.py]`.
+- Complete XSS challenges on **OWASP Juice Shop** and **Pwn College**.
+- Investigate reversing techniques for Java and C files.
+- Access and exploit the vulnerable virtual machine `[mustang.vbox]`.
+
+---
