@@ -117,7 +117,7 @@ Develop a tool that accepts an image as input, processes it using the GEMINI API
 3. **Visualization**: Ensure that you include relevant data visualizations (graphs, plots, etc.) where necessary.
 
 4. **GitHub**: All completed tasks must be uploaded to a GitHub repository. The repository should include:
-   - Make it Public with repo name as "<yourname>_ACM_SIGAI_Recr"
+   - Make it Public with repo name as "**yourname**_ACM_SIGAI_Recr"
    - A clear README file explaining how to run the code and the results
    - Separate folders for each task (Task 1, Task 2, etc.), with respective files clearly named
 
