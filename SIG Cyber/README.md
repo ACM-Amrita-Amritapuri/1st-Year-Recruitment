@@ -16,11 +16,13 @@ To reverse engineer the file in a Windows environment, refer to `[requirement.c]
 
 ## Cryptography Task
 
-The file `[code.py]` contains cryptographic operations. Review the code to understand the algorithms implemented (e.g., AES, RSA, etc.). Analyze encryption and decryption functions for logic and potential vulnerabilities.
+The file `[code.py]` contains cryptographic operations. 
 
 ---
 
-## XSS Tasks (Prompt 1)
+XSS Tasks (Prompt 1)
+
+---
 
 ### Challenges
 

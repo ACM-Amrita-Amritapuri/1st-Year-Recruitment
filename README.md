@@ -24,7 +24,7 @@ Here are some tasks for you to get started with; make sure you learn along the w
 
 ---
 
-### 2. **AI and Machine Learning (SIG-AIML)**  
+### 2. **AI and Machine Learning (SIG-AI)**  
 - Implement a basic Linear Regression using Python.  
 - Explore any ML dataset from Kaggle and analyze it.  
 - Bonus: Try a beginner-level Kaggle competition.  
