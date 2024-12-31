@@ -8,6 +8,25 @@
 </p>
 
 
+## Contacts
+###### SIG-AI:
+-     Lokesh Y                                    Abhinav M Nair
+      AI Lead                                     AI Colead
+      7095419591                                  9400642679
+###### SIG-AppDEV:
+-     Gowri P Shenoy                               Karthik Kishor
+      AppDEV Lead                                  AppDEV Co lead
+      8547344344                                   9846683477
+###### SIG-Cyber:
+-     Akhil Menon                                 Vasudev B
+      Cyber Lead                                  Cyber Colead
+      9400646772                                  9846581978
+###### SIG-Web:
+-     Akhil Menon                                 Aleena Sebastian
+      Web Lead                                    Web Colead
+      9400646772                                  9188616710
+
+
 ## Submission Link:- 
 https://aseam.acm.org/join/submit
 
@@ -49,20 +68,3 @@ https://aseam.acm.org/join/submit
 https://aseam.acm.org/join/submit
 
 
-## Contacts
-###### SIG-AI:
--     Dhruv R Krishnan                            Lokesh Yarramallu
-      AI Lead                                     AI Mentor
-      9880611945                                  7095419591
-###### SIG-CP:
--     Maanav Thalapilly                           Gowri P Shenoy
-      CP Lead                                     CP Mentor
-      9746301081                                  8547344344
-###### SIG-Cyber:
--     Aadithyan Raju                              Akhil Menon
-      Cyber Lead                                  Cyber Mentor
-      9562341272                                  9400646772
-###### SIG-Web:
--     Akhil Menon                                 Adithya S Nair
-      Web Mentor                                  Web Mentor
-      9400646772                                  8136859455
