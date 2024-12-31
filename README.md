@@ -1,8 +1,9 @@
-<div style="text-align: center; margin-bottom: 20px;">
+<p align="center">
   <a href="https://aseam.acm.org/">
-    <img src="https://acm-amritapuri.vercel.app/_next/image?url=%2FLogo.png&w=640&q=75" alt="Logo" style="width: 30%;">
+    <img src="https://acm-amritapuri.vercel.app/_next/image?url=%2FLogo.png&w=640&q=75" alt="Logo" width="30%">
   </a>
-</div>
+</p>
+
 
 <h1 style="text-align: center; color: #2c3e50; font-family: 'Arial', sans-serif;">ACM Student Chapter Recruitment Tasks (S2 Students)</h1>
 
