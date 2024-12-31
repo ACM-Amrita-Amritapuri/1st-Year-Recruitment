@@ -1,3 +1,6 @@
+<a href="https://aseam.acm.org/">
+    <img src="https://acm-amritapuri.vercel.app/_next/image?url=%2FLogo.png&w=640&q=75" alt="Logo" width=30%>
+  </a>
 
 # ACM Student Chapter Recruitment Tasks (S2 Students)  
 
