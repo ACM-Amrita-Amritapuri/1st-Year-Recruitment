@@ -7,12 +7,6 @@
   <h3 align="center">ACM Student Chapter - Amritapuri<br>Task List - 2023</h3>
 </p>
 
-## Submission Deadline
-Each SIG has their own specific deadline.
-- SIG AI : 17/3/23
-- SIG CP : 12/3/24 (Contest Date)
-- SIG Cyber : 17/3/23
-- SIG Web : 17/3/23
 
 ## Submission Link:- 
 https://aseam.acm.org/join/submit
